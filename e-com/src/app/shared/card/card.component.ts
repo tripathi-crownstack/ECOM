@@ -12,6 +12,7 @@ export class CardComponent implements OnInit {
 
   @Input() product!:any;
   currentItems!:Array<Number>
+  isloader:boolean=false
 
   ngOnInit(): void {
     this.dataService.cartItem.subscribe(result=>{
@@ -20,9 +21,14 @@ export class CardComponent implements OnInit {
   }
 
   addProductToCart(id:Number){
-    this.currentItems.push(id)
-    this.dataService.setCartQuantity(this.currentItems.length)
-    this.dataService.setCartItem(this.currentItems)
+    if(this.currentItems.includes(id)){
+      this.dataService.itemAddedToCart.next(false)
+      this.dataService.setCartQuantity(this.currentItems.length)
+    }else{
+      this.currentItems.push(id)
+      this.dataService.itemAddedToCart.next(true)
+      this.dataService.setCartQuantity(this.currentItems.length)
+      this.dataService.setCartItem(this.currentItems)
+    }
   }
-
 }

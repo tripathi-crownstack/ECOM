@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://api.products.luezoid.com/products?page=1'
+  baseUrl: 'http://api.products.luezoid.com/products'
 };
 
 /*

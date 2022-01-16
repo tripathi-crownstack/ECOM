@@ -30,9 +30,7 @@ export class ApiInterceptorInterceptor implements HttpInterceptor {
     }
 
     headers = headers.append('Authorization', `Bearer ${authToken}`)
-
     request = request.clone({ headers, url: environment.baseUrl + request.url });
-
 
     return next.handle(request);
   }

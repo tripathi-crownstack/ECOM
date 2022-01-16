@@ -1,6 +1,6 @@
 
-<app-header></app-header>
-<div class="wrapper">
+<app-loader *ngIf="isloader"></app-loader>
+<div class="wrapper" *ngIf="!isloader">
   <div class="card-list">
     <ng-container *ngFor="let product of productList">
       <div>
@@ -9,8 +9,7 @@
     </ng-container>
   </div>
 </div>
-<app-pagination></app-pagination>
-<app-footer></app-footer>
+<app-pagination (currentPage)="setPage($event)"></app-pagination>
 
 
 

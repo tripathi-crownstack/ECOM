@@ -10,12 +10,28 @@ export class ProductListComponent implements OnInit {
 
 
   productList!:any
+  isloader!:boolean;
+  page:number=1
   constructor(private productService:ProductsService) { }
 
   ngOnInit(): void {
-    this.productService.getProductList().subscribe((response:any)=>{
-      this.productList=response.data.items;
-    })
+    this.getProductList()
   }
 
+  getProductList(){
+    this.isloader=true
+    this.productService.getProductList({page:this.page}).subscribe((response:any)=>{
+      if(response){
+        this.isloader=false
+        this.productList=response.data.items;
+      }
+    },error=>{
+      this.isloader=false
+      console.error("No data Available :",{error})
+    })
+  }
+  setPage(page:number){
+    this.page=page;
+    this.getProductList()
+  }
 }

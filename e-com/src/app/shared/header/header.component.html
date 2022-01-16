@@ -4,4 +4,10 @@
     <img class="right cart-icon white-icon" src="assets/shopping-cart.png" />
     <em class="quantity right"><span [ngClass]="{'variable-font':quantity.toString().length>2}">{{quantity}}</span></em>
   </div>
+  <div class="alert alert-success" role="alert" *ngIf="itemAddedToCart && showInfoMessage">
+    Item Successfully added to Cart!
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="!itemAddedToCart && showInfoMessage && quantity>0">
+    Item Already Present in the Cart !!
+  </div>
 </div>
