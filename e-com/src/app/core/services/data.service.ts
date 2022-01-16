@@ -10,6 +10,7 @@ export class DataService {
   cartItem = this.product.asObservable()
 
   quantity = new BehaviorSubject(<Number>(0))
+  itemAddedToCart=new BehaviorSubject(<boolean>(false))
 
   constructor() { }
 

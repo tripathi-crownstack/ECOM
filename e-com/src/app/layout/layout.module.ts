@@ -8,6 +8,10 @@ import { ProductDetailsComponent } from './market/components/product-details/pro
 
 
 const routes:Routes=[{
+  path:'',
+  component: LayoutComponent
+},
+  {
   path:"product",
   component: ProductListComponent
 }]
