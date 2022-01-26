@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { MonitorTableComponent } from './monitor-table/monitor-table.component';
 import { HeaderComponent } from './header/header.component';
 import { NavComponent } from './nav/nav.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 

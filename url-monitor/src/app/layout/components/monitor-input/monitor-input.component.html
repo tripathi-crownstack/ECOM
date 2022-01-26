@@ -1,0 +1,25 @@
+<div class="search-input">
+  <label for="basic-url" class="form-label">Put your URL Here :</label>
+  <form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+    <div class="input-group mb-3 ">
+      <span style="position:relative;z-index:300" ><i width="40px"  class="fa fa-search"></i></span>
+      <input type="text" class="form-control custom-input" formControlName="url"  aria-describedby="basic-addon3">
+
+      <div class="dropdown" name='frequency' [(ngModel)]="selectedFrequency"  [ngModelOptions]="{standalone: true}" ngDefaultControl>
+        <button  class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        {{selectedFrequency==''?"Select Frequency":selectedFrequency}}
+        </button>
+        <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1"  >
+          <ng-container *ngFor="let item of list" >
+            <li [value]="item" (click)="selectFrequency($event)"><a class="dropdown-item">{{item}}</a></li>
+          </ng-container>
+        </ul>
+      </div>
+    </div>
+    <button  class="btn btn-primary" type="submit" >Analyse</button>
+  </form>
+</div>
+
+
+
+

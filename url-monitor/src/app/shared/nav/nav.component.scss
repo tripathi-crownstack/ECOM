@@ -5,10 +5,14 @@ nav{
 
 nav ul{
   display: inline-block;
+  margin-bottom: 0;
 }
 
 nav ul:last-child{
   float: right;
+  li a{
+    color: white;
+  }
 }
 
 nav ul li{

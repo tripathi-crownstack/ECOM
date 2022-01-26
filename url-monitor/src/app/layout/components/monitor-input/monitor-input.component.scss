@@ -1,0 +1,64 @@
+.search-input{
+  width: 60%;
+  position: absolute;
+  top:40%;
+  left:50%;
+  transform: translate(-50%,-50%);
+ }
+
+
+ .custom-input{
+   border-radius: 30px !important;
+
+ }
+ .search-icon
+ {
+   position: relative;
+   i{
+     color: black;
+   }
+ }
+ .fa.fa-search
+ {
+   color: rgb(206, 206, 206);
+   position: absolute;
+   top: 8px;
+   left: 14px;
+   font-size: 20px;
+ }
+
+
+ .btn.btn-success.dropdown-toggle
+{
+  border-radius: 30px;
+}
+
+.dropdown-item
+{
+  padding: 3px 10;
+  font-size: 16px;
+  text-align: justify;
+  &:hover{
+    background-color: #198754;
+    color: #fff;
+  }
+}
+
+#dropdownMenuButton1{
+  min-width: 150px;
+  max-height: 400px;
+  overflow-y: scroll;
+}
+input{
+  padding-left: 40px;
+}
+
+form .btn.btn-primary{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 5px 10px;
+  border-radius: 25px;
+  min-width: 100px;
+  outline: 0cm;
+}

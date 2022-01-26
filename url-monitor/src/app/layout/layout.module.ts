@@ -4,6 +4,8 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './components/admin/admin.component';
 import { SharedModule } from '../shared/shared.module';
+import { MonitorInputComponent } from './components/monitor-input/monitor-input.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 const routes:Routes=[{
@@ -14,12 +16,15 @@ const routes:Routes=[{
 @NgModule({
   declarations: [
     LandingPageComponent,
-    AdminComponent
+    AdminComponent,
+    MonitorInputComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
     RouterModule.forChild(routes),
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class LayoutModule { }
