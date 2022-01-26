@@ -1,0 +1,21 @@
+nav{
+  width: 100%;
+  background-color: black;
+}
+
+nav ul{
+  display: inline-block;
+}
+
+nav ul:last-child{
+  float: right;
+}
+
+nav ul li{
+  display: inline-block;
+  padding: 20px 10px;
+}
+
+nav ul li:first-child{
+  padding-left: 20px;
+}
