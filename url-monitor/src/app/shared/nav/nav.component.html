@@ -8,8 +8,8 @@
     <li><a href="" title=""><i class="fa fa-envelope"></i></a></li>
     <li><a href="" title=""><i class="fa fa-bell"></i></a></li>
     <li><a href="" title=""><i class="fa fa-user"></i></a></li>
-    <li ><a id="name" href="" title="" >Rishabh Tripathi</a></li>
-    <li ><a id="logout" (click)="logout()" ><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+    <li ><a id="name" href="" title="" >{{currentUser ?currentUser:'Login'  }}</a></li>
+    <li ><a *ngIf="currentUser" id="logout" (click)="logout()" ><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
   </ul>
 </nav>
 

@@ -31,8 +31,6 @@ export class ApiInterceptor implements HttpInterceptor {
             }
         }
 
-
-
         httpRequest = httpRequest.clone({ headers, url: httpRequest.url });
 
         return next.handle(httpRequest).pipe(tap((event: HttpEvent<any>) => {
