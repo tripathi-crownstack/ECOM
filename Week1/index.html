@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Java Script Practice</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"  href='./styles.css'>
+        <script src="./hoisting.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li>Rishabh Tripathi</li>
+                    <li>Topics</li>
+                    <li>Learning Materials</li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container">
+            <section>
+                <div class="section-title">Hoisting</div>
+                <div class="hoisting section-example flex-center">
+                    <ul>
+                        <li>Hoisting refers to the initialization and declaration of variables at the top of the Scope.</li>
+                        <li>Only <b>var</b> is declared as well as initialized but <b>let</b> and <b>const</b> are only declared but not initialized.They are known as temporal dead zone. </li>
+                        <li></li>
+
+                    </ul>
+                </div>            
+            </section>
+
+            <section>
+                <div class="section-title">Closures</div>
+                <div class="closures section-example flex-center">
+                    <ul> 
+                        <li>Functions along with its lexical environment forms a closure.</li>
+                        <li>Every function in javascript has access to its scoped variables and its lexical environment (Environment in which the function is declared). </li>
+                        <li>Important point to be noticed here is that if every functions remembers its lexical environment means the inner function knows its parent variable , in the the same way the parent variable also knows the lexical environment of its grand-parent's variables and so on.    </li>
+                    </ul>  
+                </div>
+            </section>
+            <section>
+                <div class="section-title">Generator Functions</div>
+                <div class="generator section-example flex-center">
+                <ul>
+                    <li>A generator is a function that produces a sequence of results instead of a single value, i.e you generate ​a series of values.</li>
+                    <li>Declared by function keyword followed by asterisk symbol. e.g. function * New() </li>
+                    <li>The generator function has <b>yield</b> keyword instead of <b>return</b> which gives the output at that particular time.     </li>
+                    <li>It allows to pause our execution  </li>
+                </ul>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-title">Event Bubbling</div>
+                <div class="event-bubbling section-example flex-center">
+                    <form onclick="alert('form')">FORM
+                        <div onclick="alert('div')">DIV
+                          <p onclick="alert('p')">P</p>
+                        </div>
+                    </form>
+                    <p onclick="alert(`the bubbling doesn't reach here`)">
+                        <button onclick="event.stopPropagation()">Click me</button>
+                    </p>
+                    <h4>
+                    Consider the above example ,here When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.
+                    </h4>
+                    <ul>
+                        <li> Normally it goes upwards till html.</li>
+                        <li>some events like 'focus' does not bubble. </li>    
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-title">Prototype Chaining</div>
+                <div class="hoisting section-example flex-center">
+                    <ul>
+                        <li>Every object/array/function has access to some hidden properties and functions.These properties are attached by javascript in the form of Object through which we are able to acesss to those functions/prperties. </li>
+                        <li>Every things in  js ends up as an object on the prototype-chain</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>
