@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./styles.css" rel="stylesheet">
+        <script src="https://npmcdn.com/@reactivex/rxjs@5.0.0-rc.1/dist/global/Rx.js"></script>
+        <script defer src="./rxjs/pluck.js"> </script>
+    </head>
+    <body>
+        <button>Test</button>
+        <div>
+            <p>Throttle Time</p>
+            <ul>
+                <li>ThrottleTime emits the source Observable values on the output Observable when its internal timer is disabled and ignores source values when the timer is enabled.</li>
+                <li> Initially, the timer is disabled. As soon as the first source value arrives, it is forwarded to the output Observable, and then the timer is enabled.</li>
+            </ul>
+        </div>
+
+        <section>
+            <h3>Debounce Time</h3>
+            <input type="text" />
+            <div class="">
+            </div>
+        </section>
+
+        <section>
+            <h3>Merge Map</h3>
+            <input type="text" id="input1" placeholder="Input 1"/>
+            <input type="text" id="input2" placeholder="Input 2"/
+            <p>Combined Value: <span></span></p>
+            <div class="">
+            </div>
+        </section>
+
+        <section>
+            <button id="newButton">Click Me</button>
+        </section>
+    </body>
+</html>
