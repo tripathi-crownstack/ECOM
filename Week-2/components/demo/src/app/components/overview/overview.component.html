@@ -1,0 +1,30 @@
+<div class="overview">
+<table class="table">
+  <thead class='thead'>
+    <tr>
+      <th>Declaration Type</th>
+      <th>Syntax</th>
+      <th>Commands</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Normal Declaration</td>
+      <td>
+        <pre [textContent]="declarations[1]"> </pre>
+      </td>
+      <td> <pre>{{'* ng generate component overview' +'\n'+ '* ng g c overview'}}</pre></td>
+    </tr>
+    <tr>
+      <td>Template Declarations</td>
+      <td><pre [textContent]="declarations[0]"> </pre> </td>
+      <td> <pre>{{'* ng generate component overview  --inlineTemplate=true --' +'\n'+ '* ng g c overview  --inlineTemplate=true --'}}</pre></td>
+    </tr>
+    <tr>
+      <td>Styles Declarations</td>
+      <td><pre [textContent]="declarations[2]"> </pre></td>
+      <td><pre [textContent]="'* ng generate component hero-app --inline-style'"></pre></td>
+    </tr>
+  </tbody>
+</table>
+</div>

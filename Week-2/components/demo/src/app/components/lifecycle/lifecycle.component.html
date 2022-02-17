@@ -1,0 +1,15 @@
+<ul>
+  <li>Constructor :<span> This is invoked when Angular creates a component or directive by calling new on the class.</span></li>
+  <li>ngOnChanges : <span>Invoked every time there is a change in one of th input properties of the component.</span></li>
+  <li>ngOnInit: <span>Invoked when given component has been initialized.</span></li>
+  <li>ngDoCheck : <span>Invoked when the change detector of the given component is invoked. It allows us to implement our own change detection algorithm for the given component.</span></li>
+  <li><b>ngAfterContentInit</b>: <span>Invoked after Angular performs any content projection into the component’s view.</span></li>
+  <li><b>ngAfterContentChecked</b> : Invoked each time the content of the given component has been checked by the change detection mechanism of Angular.</li>
+  <li><b>ngAfterViewInit</b> : <span>Invoked when the component’s view has been fully initialized.</span></li>
+  <li><b>ngAfterViewChecked</b> :<span> Invoked each time the view of the given component has been checked by the change detection mechanism of Angular.</span></li>
+  <li>ngOnDestroy :<span> This method will be invoked just before Angular destroys the component.</span></li>
+</ul>
+
+<div>
+  <app-joke-list></app-joke-list>
+</div>

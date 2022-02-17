@@ -1,0 +1,36 @@
+.center{
+  text-align: center;
+}
+
+.flex-center
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-column{
+    flex-direction: column;
+
+  }
+}
+
+.custom-button{
+  padding: 12px 20px;
+  min-width: 100px;
+  max-width: 150px;
+  text-align: center;
+  color: white;
+  border-radius:25px;
+  border-width:0 ;
+  margin:3px 5px;
+  cursor:pointer;
+  &-red{
+    background-color: red;
+  }
+  &-blue{
+    background-color: rgb(36, 143, 250);
+  }
+  &-green{
+    background-color: rgb(22, 211, 79);
+  }
+}
+

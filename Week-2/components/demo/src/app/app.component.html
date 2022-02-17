@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <header class="header">
+    <nav class="nav">
+      <ul class="list">
+        <li routerLinkActive="active-link" ><a [routerLink]="'overview'"  >Overview</a></li>
+        <li routerLinkActive="active-link"><a [routerLink]="'lifecycle'"> LifeCycle</a></li>
+        <li routerLinkActive="active-link"><a [routerLink]="'encapsulation'" >Encapsulation</a></li>
+        <li routerLinkActive="active-link"><a [routerLink]="'dynamic'" >Dynamic Component</a></li>
+        <li routerLinkActive="active-link"><a [routerLink]="'component-interaction'" >Component Interaction</a></li>
+        <!-- <li routerLinkActive="active-link"><a [routerLink]="'angular-element'" >Angular Element</a></li> -->
+      </ul>
+    </nav>
+  </header>
+</div>
+<router-outlet></router-outlet>
